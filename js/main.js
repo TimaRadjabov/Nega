@@ -188,17 +188,16 @@ if ($('#main-body').length > 0) {
 function phone() {
 	let phoneBtn = document.querySelectorAll('.modal-phone');
 	let popupPhone = document.querySelector('.popup-phone');
-	let body = document.querySelector('body');
 
 	for (let p = 0; p < phoneBtn.length; p++) {
 		 phoneBtn[p].addEventListener('click', function () {
 			  popupPhone.classList.add('is-active');
-			  body.classList.add('no-scroll');
+			  bodyLock()
 			  if (popupPhone.classList.contains('is-active')) {
 					body.addEventListener('keydown', function (e) {
 						 if (e.keyCode === 27) {
 							  popupPhone.classList.remove('is-active');
-							  body.classList.remove('no-scroll');
+							  bodyUnlock()
 						 }
 					})
 			  }

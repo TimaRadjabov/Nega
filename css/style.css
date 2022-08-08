@@ -108,6 +108,7 @@ body.popup{
   border-radius: 85px;
   padding: 7px;
   display: inline-block;
+
 }
 
 .btn__cover:hover {
@@ -132,7 +133,59 @@ body.popup{
   text-align: center;
   color: #f3f0eb;
   padding: 26px 109px 25.5px;
+  position: relative;
+  overflow: hidden;
 }
+.btn::after {
+	content: "";
+	margin-left: 60px;
+	width: 25px;
+	height: 300px;
+	background: -webkit-gradient(linear, left bottom, left top, from(#fff), to(rgba(255, 255, 255, 0.01)));
+	background: linear-gradient(0deg, #fff, rgba(255, 255, 255, 0.01));
+	-webkit-animation-delay: 0.05s;
+	animation-delay: 0.05s;
+	position: absolute;
+	-webkit-animation-timing-function: ease-in-out;
+	animation-timing-function: ease-in-out;
+	-webkit-transition: all 0.3s;
+	transition: all 0.3s;
+	-webkit-animation-name: slideme;
+	animation-name: slideme;
+	-webkit-animation-duration: 4s;
+	animation-duration: 4s;
+	-webkit-animation-iteration-count: infinite;
+	animation-iteration-count: infinite;
+	-webkit-transform: rotate(45deg);
+	transform: rotate(45deg);
+  position: absolute;
+  left: -90px;
+  top: -150px;
+	z-index: 0; 
+}
+	
+	@-webkit-keyframes slideme {
+		0% {
+		  left: -30px;
+		  margin-left: 0;
+		}
+		30%,
+		to {
+		  left: 110%;
+		  margin-left: 80px;
+		}
+	 }
+	 @keyframes slideme {
+		0% {
+		  left: -30px;
+		  margin-left: 0;
+		}
+		30%,
+		to {
+		  left: 110%;
+		  margin-left: 80px;
+		}
+	 }
 
 /* =================================================  header  ================================================ */
 .header {
@@ -3374,6 +3427,7 @@ table td {
 }
 .footer__vk {
   padding-bottom: 15px;
+  cursor: pointer;
 }
 .footer__policy {
   font-family: "gilroy-regular";
