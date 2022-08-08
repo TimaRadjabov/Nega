@@ -30,7 +30,14 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
+.lock{
+  overflow: hidden;
+}
+body.popup{
+  height: 100vh;
+  overflow-y: hidden;
+  padding-right: 15px
+}
 .wrapper {
   width: 100%;
   min-height: 100%;
@@ -1183,6 +1190,25 @@ body {
   background: url("../img/form/name.svg") 7px 15px no-repeat;
   padding-left: 34px;
 }
+.form__input:focus{
+  color: #000000;
+}
+.form__input.validate {
+  border-bottom: 1px solid red;
+  color: red;
+}
+.form__input.validate::-webkit-input-placeholder {
+  color: red;
+}
+.form__input.validate::-moz-placeholder {
+  color: red;
+}
+.form__input.validate:-moz-placeholder {
+  color: red;
+}
+.form__input.validate:-ms-input-placeholder {
+  color: red;
+}
 .btn__way {
   padding: 19px 67px 17px;
 }
@@ -1193,20 +1219,29 @@ body {
   max-width: 1075px;
   margin: 0 auto;
 }
-.policy__tick {
+.form__policy img{
   margin-right: 5px;
 }
+
 .form__policy p {
   max-width: 267px;
   font-family: "gilroy-regular";
   font-size: 11px;
   line-height: 13px;
-
   color: rgba(82, 76, 73, 0.56);
+
+}
+.content__policy p{
+  max-width: 1075px;
+  color: rgba(255, 255, 255, 0.54);
+}
+.content__policy p span{
+  color: rgba(255, 255, 255, 0.54);
 }
 .politicy {
   color: #000;
   text-decoration: underline;
+  cursor: pointer;
 }
 .politicy:hover {
   text-decoration: none;
@@ -1552,6 +1587,9 @@ body {
   }
 }
 @media (max-width: 600px) {
+  .statistic__body {
+    padding: 40px 0;
+  }
   .statistic__item-title {
     font-size: 16px;
     text-align: center;
@@ -2553,6 +2591,7 @@ table td {
 
   table th {
     font-size: 16px;
+    min-width: 115px;
   }
   table td {
     font-size: 15px;

@@ -94,7 +94,7 @@
 }
 
 #third__modal {
-  background: url("../img/modal/01.png") 0 100% no-repeat, #f5f5f5;
+  background: url("../img/modal/03.png") 0 100% no-repeat, #f5f5f5;
   border-radius: 5px;
 }
 #second__modal {
@@ -138,7 +138,7 @@
 }
 
 .popup-presentation__description {
-  font-family: "Gilroy";
+  font-family: "gilroy-regular";
   font-weight: 400;
   font-size: 17px;
   line-height: 20px;
@@ -229,7 +229,7 @@
     justify-content: space-between;
   }
   .popup__inner {
-    padding: 20px;
+    padding: 40px 15px 20px;
   }
   .popup-presentation__title {
     font-size: 17px;
@@ -356,7 +356,7 @@
   padding-bottom: 5px;
 }
 .from__policy-modal {
-  padding: 0px 25px;
+  padding: 0px;
   align-items: flex-start;
 }
 @media (max-width: 976px) {
@@ -408,19 +408,16 @@
     text-align: center;
     padding-bottom: 10px;
   }
-  #third__modal {
-    background: #fff;
-  }
 }
 @media (max-width: 800px) {
   #first__modal {
-    background: #fff;
+    background: #f5f5f5;
   }
   #second__modal {
-    background: #fff;
+    background: #f5f5f5;
   }
   .popup-presentation__form {
-    max-width: 280px;
+    max-width: 310px;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
@@ -475,9 +472,20 @@
     color: rgba(82, 76, 73, 0.56);
   }
 }
-
-.popup__second{
-	max-width: 430px;
+.form__input-phone {
+  color: rgba(82, 76, 73, 0.6);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+}
+.content__input{
+  color: rgba(255, 255, 255, 0.7);
+}
+.content__input:focus{
+  color: rgba(255, 255, 255, 0.7);
+}
+.popup__second {
+  max-width: 430px;
 }
 .second__modal {
   padding: 44px 0 47px 73px;
@@ -493,69 +501,100 @@
   text-align: left;
   padding-bottom: 26px;
 }
-.form__input.second__modal-input{
-	width: 428px;
-	height: 58px;
-	margin-bottom: 12px;
+.form__input.second__modal-input {
+  width: 428px;
+  height: 58px;
+  margin-bottom: 12px;
 }
-.second__modal-cover{
-	width: 428px;
-	margin-top: 11px;
-	background: #FF3D60;
-}
-.second-modal__btn{
-	padding: 20px 11px 21px;
-	background: #FF3D60;
-}
-.second__modal-policy{
-	max-width: 379px;
-	justify-content: start;
-	padding: 0;
-	margin: 0;
-}
-.second__modal-policy img{
-	margin-right: 10px;
-}
-.second__modal-policy p{
-	max-width: 379px;
-	line-height: 125%;
-}
-.second-modal__response{
-	display: none;
-}
-@media (max-width: 796px) {
-	.second__modal{
-		padding: 30px 20px;
-	}
-	.popup-phone .popup-presentation__title {
-	  max-width: 210px;
-	  margin: 0 auto;
-	}
-	.second__descr{
-	 margin: 0 auto;
-	 text-align: center;
-	}
- }
- @media (max-width: 600px) {
-	.second__descr {
-		font-size: 15px;
-		padding-bottom: 20px;
-  }
-  .second__modal-cover {
-	width: 240px;
-	margin-top: 11px;
+.second__modal-cover {
+  width: 428px;
+  margin-top: 11px;
+  background: #ff3d60;
 }
 .second-modal__btn {
-	display: none;
-}
-.second-modal__response{
-	display: block;
-	padding: 15px 10px;
+  padding: 20px 11px 21px;
+  background: #ff3d60;
 }
 .second__modal-policy {
-	max-width: 240px;
+  max-width: 379px;
+  justify-content: start;
+  padding: 0;
+  margin: 0;
 }
-.popup-presentation__form-field {
-	margin-bottom: 10px;
+.second__modal-policy img {
+  margin-right: 10px;
 }
- }
+.second__modal-policy p {
+  max-width: 379px;
+  line-height: 125%;
+}
+.second-modal__response {
+  display: none;
+}
+@media (max-width: 796px) {
+  .second__modal {
+    padding: 30px 20px;
+  }
+  .popup-phone .popup-presentation__title {
+    max-width: 210px;
+    margin: 0 auto;
+  }
+  .second__descr {
+    margin: 0 auto;
+    text-align: center;
+  }
+}
+@media (max-width: 600px) {
+  .second__modal {
+    padding: 20px 0px;
+  }
+  .second__descr {
+    font-size: 15px;
+    padding-bottom: 20px;
+  }
+  .second__modal-cover {
+    width: 240px;
+    margin-top: 11px;
+  }
+  .second-modal__btn {
+    display: none;
+  }
+  .second-modal__response {
+    display: block;
+    padding: 15px 10px;
+  }
+  .second__modal-policy {
+    max-width: 240px;
+  }
+  .popup-presentation__form-field {
+    margin-bottom: 10px;
+  }
+}
+.third__modal {
+  padding: 70px 70px 60px 50px;
+}
+.third__modal-descr {
+  max-width: 344px;
+  text-align: left;
+}
+@media (max-width: 776px) {
+  .third__modal {
+    padding: 40px 30px;
+  }
+  .popup-exit .popup-presentation__title {
+    margin: 0 auto;
+    max-width: 240px;
+  }
+  .third__modal-descr {
+    margin: 0 auto;
+    text-align: center;
+  }
+  #third__modal {
+    background: #f5f5f5;
+  }
+}
+@media (max-width: 600px) {
+  .third__modal {
+    padding: 20px 15px;
+  }
+}
