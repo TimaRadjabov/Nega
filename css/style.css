@@ -30,13 +30,13 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-.lock{
+.lock {
   overflow: hidden;
 }
-body.popup{
+body.popup {
   height: 100vh;
   overflow-y: hidden;
-  padding-right: 15px
+  padding-right: 15px;
 }
 .wrapper {
   width: 100%;
@@ -108,7 +108,6 @@ body.popup{
   border-radius: 85px;
   padding: 7px;
   display: inline-block;
-
 }
 
 .btn__cover:hover {
@@ -137,55 +136,61 @@ body.popup{
   overflow: hidden;
 }
 .btn::after {
-	content: "";
-	margin-left: 60px;
-	width: 25px;
-	height: 300px;
-	background: -webkit-gradient(linear, left bottom, left top, from(#fff), to(rgba(255, 255, 255, 0.01)));
-	background: linear-gradient(0deg, #fff, rgba(255, 255, 255, 0.01));
-	-webkit-animation-delay: 0.05s;
-	animation-delay: 0.05s;
-	position: absolute;
-	-webkit-animation-timing-function: ease-in-out;
-	animation-timing-function: ease-in-out;
-	-webkit-transition: all 0.3s;
-	transition: all 0.3s;
-	-webkit-animation-name: slideme;
-	animation-name: slideme;
-	-webkit-animation-duration: 4s;
-	animation-duration: 4s;
-	-webkit-animation-iteration-count: infinite;
-	animation-iteration-count: infinite;
-	-webkit-transform: rotate(45deg);
-	transform: rotate(45deg);
+  content: "";
+  margin-left: 60px;
+  width: 25px;
+  height: 300px;
+  background: -webkit-gradient(
+    linear,
+    left bottom,
+    left top,
+    from(#fff),
+    to(rgba(255, 255, 255, 0.01))
+  );
+  background: linear-gradient(0deg, #fff, rgba(255, 255, 255, 0.01));
+  -webkit-animation-delay: 0.05s;
+  animation-delay: 0.05s;
+  position: absolute;
+  -webkit-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  -webkit-animation-name: slideme;
+  animation-name: slideme;
+  -webkit-animation-duration: 4s;
+  animation-duration: 4s;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
   position: absolute;
   left: -90px;
   top: -150px;
-	z-index: 0; 
+  z-index: 0;
 }
-	
-	@-webkit-keyframes slideme {
-		0% {
-		  left: -30px;
-		  margin-left: 0;
-		}
-		30%,
-		to {
-		  left: 110%;
-		  margin-left: 80px;
-		}
-	 }
-	 @keyframes slideme {
-		0% {
-		  left: -30px;
-		  margin-left: 0;
-		}
-		30%,
-		to {
-		  left: 110%;
-		  margin-left: 80px;
-		}
-	 }
+
+@-webkit-keyframes slideme {
+  0% {
+    left: -30px;
+    margin-left: 0;
+  }
+  30%,
+  to {
+    left: 110%;
+    margin-left: 80px;
+  }
+}
+@keyframes slideme {
+  0% {
+    left: -30px;
+    margin-left: 0;
+  }
+  30%,
+  to {
+    left: 110%;
+    margin-left: 80px;
+  }
+}
 
 /* =================================================  header  ================================================ */
 .header {
@@ -333,6 +338,12 @@ body.popup{
     url("../img/main/owner.png") 100% 100% no-repeat,
     url("../img/main/back.png") 50% 50% / cover no-repeat;
 }
+@media (max-width: 1186px) {
+  .main {
+    background: url("../img/main/effect.png") 0 0 / cover no-repeat,
+      url("../img/main/back.png") 50% 50% / cover no-repeat;
+  }
+}
 .main__body {
   padding: 183px 0px 99px;
 }
@@ -417,7 +428,10 @@ body.popup{
 .main__slider {
   display: none;
 }
-@media (max-width: 990px) {
+@media (max-width: 1023px) {
+  .main__body {
+    padding: 130px 0px 60px;
+  }
   .main__title {
     font-size: 32px;
   }
@@ -427,6 +441,11 @@ body.popup{
   }
   .main__list > *:not(:last-child) {
     margin-right: 30px;
+  }
+}
+@media (max-width: 890px) {
+  .main__title {
+    font-size: 29px;
   }
 }
 @media (max-width: 768px) {
@@ -1089,6 +1108,24 @@ body.popup{
     display: none;
   }
 }
+@media (max-width: 1023px) {
+  .history {
+    background: url("../img/history/back2.png") 100% 0 / cover no-repeat;
+  }
+  .history__body {
+    padding: 75px 0px 60px;
+}
+.history__title {
+  margin: 0 auto;
+  font-size: 28px;
+  text-align: center;
+}
+.history__list {
+  margin: 0 auto;
+  text-align: center;
+  max-width: 600px;
+}
+}
 @media (max-width: 768px) {
   .history__body {
     padding: 80px 0px 60px;
@@ -1231,7 +1268,7 @@ body.popup{
   line-height: 19px;
   color: rgba(82, 76, 73, 0.6);
 }
-.content__input{
+.content__input {
   color: rgba(255, 255, 255, 0.7);
 }
 .form__input-phone {
@@ -1246,7 +1283,7 @@ body.popup{
   background: url("../img/form/name.svg") 7px 15px no-repeat;
   padding-left: 34px;
 }
-.form__input:focus{
+.form__input:focus {
   color: #000000;
 }
 .form__input.validate {
@@ -1275,7 +1312,7 @@ body.popup{
   max-width: 1075px;
   margin: 0 auto;
 }
-.form__policy img{
+.form__policy img {
   margin-right: 5px;
 }
 
@@ -1285,13 +1322,12 @@ body.popup{
   font-size: 11px;
   line-height: 13px;
   color: rgba(82, 76, 73, 0.56);
-
 }
-.content__policy p{
+.content__policy p {
   max-width: 1075px;
   color: rgba(255, 255, 255, 0.54);
 }
-.content__policy p span{
+.content__policy p span {
   color: rgba(255, 255, 255, 0.54);
 }
 .politicy {
@@ -1299,8 +1335,8 @@ body.popup{
   text-decoration: underline;
   cursor: pointer;
 }
-.footer__policy span{
-  color: #F2F4F3;
+.footer__policy span {
+  color: #f2f4f3;
 }
 .politicy:hover {
   text-decoration: none;
@@ -1619,18 +1655,34 @@ body.popup{
   max-width: 600px;
 }
 @media (max-width: 1023px) {
-  .statistic__body {
-    padding: 60px 0px 46px 270px;
+  .statistic {
+    background:
+      url("../img/statistic/makeup.png") 100% 0 no-repeat, #f5f5f5;
   }
+  .statistic__body {
+    padding: 60px 0px 46px;
+  }
+  .statistic__title {
+    text-align: center;
+    padding-bottom: 35px;
+    max-width: 600px;
+    margin: 0 auto;
+}
   .statistic__block {
     background: #fff;
     padding: 25px 35px;
+    max-width: 600px;
+    margin: 0 auto;
   }
   .statistic__item-title {
     font-size: 20px;
+    text-align: center;
+    margin: 0 auto
   }
   .statistic__item-descr {
     font-size: 16px;
+    margin: 0 auto;
+    text-align: center;
   }
 }
 @media (max-width: 767px) {
@@ -1642,13 +1694,10 @@ body.popup{
     text-align: center;
   }
   .statistic__body {
-    padding: 40px 0px 46px 30px;
+    padding: 40px 0px;
   }
 }
 @media (max-width: 600px) {
-  .statistic__body {
-    padding: 40px 0;
-  }
   .statistic__item-title {
     font-size: 16px;
     text-align: center;
@@ -2219,13 +2268,13 @@ body.popup{
   justify-content: center;
   height: 470px;
   overflow: hidden;
-  transition: all .2s ease-out;
+  transition: all 0.2s ease-out;
   position: relative;
 }
 .support__list.active {
   height: 100%;
   overflow: visible;
-  transition: all .2s ease-out;
+  transition: all 0.2s ease-out;
 }
 .support__list > * {
   flex: 0 1 50%;
@@ -2728,6 +2777,7 @@ table td {
   padding: 23px 0px;
   text-align: center;
   flex: 1 1 50%;
+  cursor: pointer;
 
   font-family: "gilroy-bold";
   font-size: 22px;
@@ -3301,6 +3351,11 @@ table td {
 .run {
   background: url("../img/run/run.png") 50% 0 / cover no-repeat;
 }
+@media (max-width: 1180px) {
+  .run {
+    background: url("../img/run/run.png") 0 0 / cover no-repeat;
+  }
+}
 .run__body {
   padding: 87px 0 72px;
 }
@@ -3357,7 +3412,29 @@ table td {
   -webkit-mask-composite: destination-out;
   mask-composite: exclude;
 }
-
+@media (max-width: 1023px) {
+  .run__body {
+    padding: 60px 0px;
+}
+  .run__title {
+    margin: 0 auto;
+    text-align: center;
+    font-size: 26px;
+}
+.run__block{
+  margin: 0 auto 30px auto;
+}
+.run__open{
+  border: 1px solid rgba(29, 31, 38, 0.37);
+  border-radius: 10px;
+  margin: 0 auto 30px auto;
+  padding: 30px 15px;
+  text-align: center;
+}
+.run__open::before {
+  content: none;
+}
+}
 @media (max-width: 600px) {
   .run__body {
     padding: 40px 0;
@@ -3365,6 +3442,7 @@ table td {
   .run__title {
     text-align: center;
     padding-bottom: 20px;
+    font-size: 20px;
   }
   .run__title span {
     display: inline-block;
@@ -3382,12 +3460,9 @@ table td {
     font-size: 16px;
     text-align: center;
     margin-bottom: 25px;
-    border: 1px solid rgba(29, 31, 38, 0.37);
-    border-radius: 10px;
+
   }
-  .run__open::before {
-    content: none;
-  }
+
 }
 
 /* ================================================= footer ======================================================== */
@@ -3396,7 +3471,7 @@ table td {
   background: #1d1f26;
 }
 .footer__body {
-  padding: 108px 0px;
+  padding: 54px 0px 52px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -3480,6 +3555,38 @@ table td {
   margin-right: 28px;
 }
 @media (max-width: 1023px) {
+  .footer__top p {
+    font-size: 15px;
+}
+.footer__top > *:not(:last-child) {
+  margin-bottom: 25px
+}
+.footer__middle img{
+  max-width: 100px;
+}
+.footer__policy {
+  font-size: 16px;
+  text-align: center;
+}
+.phone__block-img.footer {
+  margin-right: 15px;
+  margin-left: 0px;
+}
+.phone__block.footer{
+  justify-content: flex-end;
+}
+
+.f5__block img{
+  max-width: 35px;
+  margin-right: 10px;
+}
+.f5__descr {
+  max-width: 210px;
+  font-size: 16px;
+  text-align: right;
+}
+}
+@media (max-width: 768px) {
   .footer__body {
     padding: 40px 0px;
     display: flex;
