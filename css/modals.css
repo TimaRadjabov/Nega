@@ -160,7 +160,7 @@
   line-height: 20px;
   text-align: center;
   color: #f5f5f5;
-  padding: 25px 55px;
+  padding: 21px 55px;
 }
 .popup-presentation__form {
   max-width: 310px;
@@ -310,8 +310,11 @@
   }
 }
 .popup-politicy .politicy-close {
-  height: 45px;
   margin-top: 15px;
+  padding: 10px;
+  border-radius: 15px;
+  background: #ff3d60;
+  color: #f5f5f5;
 }
 
 .priv-policy {
