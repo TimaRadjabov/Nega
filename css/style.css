@@ -33,11 +33,6 @@ body {
 .lock {
   overflow: hidden;
 }
-body.popup {
-  height: 100vh;
-  overflow-y: hidden;
-  padding-right: 15px;
-}
 .wrapper {
   width: 100%;
   min-height: 100%;
@@ -3471,7 +3466,7 @@ table td {
   background: #1d1f26;
 }
 .footer__body {
-  padding: 54px 0px 52px;
+  padding: 50px 0px 50px;
   display: flex;
   justify-content: space-between;
   align-items: center;
